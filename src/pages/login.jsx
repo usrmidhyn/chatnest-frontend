@@ -26,7 +26,7 @@ const Login = () => {
     }
 
     try {
-      const res = await axios.post("https://chatnest-backend-xv6h.onrender.com/api/auth/login", {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/login`, {
         email,
         password,
       });

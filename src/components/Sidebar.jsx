@@ -11,7 +11,7 @@ const Sidebar = ({ currentUser, selectedUser, setSelectedUser }) => {
       if (!currentUser?._id) return;
 
       try {
-        const res = await axios.get("https://chatnest-backend-xv6h.onrender.com/api/auth/users");
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/auth/users`);
         const filtered = res.data.filter((u) => u._id !== currentUser._id);
         setUsers(filtered);
       } catch (err) {

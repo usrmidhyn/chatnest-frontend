@@ -12,7 +12,7 @@ useEffect(() => {
     if (!currentUser?._id || !selectedUser?._id) return;
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/messages/${currentUser._id}/${selectedUser._id}`
+        `${import.meta.env.VITE_API_URL}/api/messages/${currentUser._id}/${selectedUser._id}`
       );
       setMessages(res.data);
     } catch (err) {

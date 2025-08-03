@@ -1,5 +1,5 @@
-import { io } from "socket.io-client";
+    import { io } from "socket.io-client";
 
-const socket = io(import.meta.env.VITE_SOCKET_SERVER); //backend url when deplyed
+    const socket = io(import.meta.env.VITE_SOCKET_SERVER); 
 
-export default socket;
+    export default socket;
