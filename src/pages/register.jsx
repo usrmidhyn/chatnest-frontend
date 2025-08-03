@@ -33,7 +33,7 @@ const Register = () => {
         email,
         password
       });
-
+      
       localStorage.setItem("user", JSON.stringify(res.data));
       navigate("/chat");
     } catch (err) {
