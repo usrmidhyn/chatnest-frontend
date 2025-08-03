@@ -48,7 +48,7 @@ useEffect(() => {
 
     try {
         console.log("Sending message payload:", payload);
-      await axios.post("http://localhost:5000/api/messages", payload);
+      await axios.post("https://chatnest-backend-xv6h.onrender.com/api/messages", payload);
       socket.emit("sendMessage", payload);
       setMessages((prev) => [...prev, payload]);
       setNewMessage("");
